@@ -1,11 +1,11 @@
-package basicmod.cards;
+package Klukai.cards;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
-import basicmod.BasicMod;
-import basicmod.util.CardStats;
-import basicmod.util.TriFunction;
+import Klukai.BasicMod;
+import Klukai.util.CardStats;
+import Klukai.util.TriFunction;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -18,8 +18,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import static basicmod.util.GeneralUtils.removePrefix;
-import static basicmod.util.TextureLoader.getCardTextureString;
+import static Klukai.util.GeneralUtils.removePrefix;
+import static Klukai.util.TextureLoader.getCardTextureString;
 
 
 public abstract class BaseCard extends CustomCard {

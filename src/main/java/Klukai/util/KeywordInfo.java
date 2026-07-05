@@ -1,4 +1,4 @@
-package basicmod.util;
+package Klukai.util;
 
 import basemod.helpers.KeywordColorInfo;
 

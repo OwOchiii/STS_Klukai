@@ -1,14 +1,14 @@
-package basicmod;
+package Klukai;
 
 import basemod.BaseMod;
 import basemod.interfaces.AddAudioSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
-import basicmod.util.GeneralUtils;
-import basicmod.util.KeywordInfo;
-import basicmod.util.Sounds;
-import basicmod.util.TextureLoader;
+import Klukai.util.GeneralUtils;
+import Klukai.util.KeywordInfo;
+import Klukai.util.Sounds;
+import Klukai.util.TextureLoader;
 import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglFileHandle;
