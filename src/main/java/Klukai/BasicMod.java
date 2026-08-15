@@ -1,10 +1,8 @@
 package Klukai;
 
+import Klukai.character.MyCharacter;
 import basemod.BaseMod;
-import basemod.interfaces.AddAudioSubscriber;
-import basemod.interfaces.EditKeywordsSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
-import basemod.interfaces.PostInitializeSubscriber;
+import basemod.interfaces.*;
 import Klukai.util.GeneralUtils;
 import Klukai.util.KeywordInfo;
 import Klukai.util.Sounds;
@@ -33,6 +31,7 @@ import java.util.*;
 
 @SpireInitializer
 public class BasicMod implements
+        EditCharactersSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         AddAudioSubscriber,
@@ -270,5 +269,10 @@ public class BasicMod implements
         else {
             throw new RuntimeException("Failed to determine mod info/ID based on initializer.");
         }
+    }
+
+    @Override
+    public void receiveEditCharacters() {
+        MyCharacter.Meta.registerCharacter();
     }
 }
