@@ -1,6 +1,8 @@
 package Klukai;
 
+import Klukai.cards.BaseCard;
 import Klukai.character.MyCharacter;
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import Klukai.util.GeneralUtils;
@@ -31,6 +33,7 @@ import java.util.*;
 
 @SpireInitializer
 public class BasicMod implements
+        EditCardsSubscriber,
         EditCharactersSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
@@ -274,5 +277,13 @@ public class BasicMod implements
     @Override
     public void receiveEditCharacters() {
         MyCharacter.Meta.registerCharacter();
+    }
+
+    @Override
+    public void receiveEditCards() {
+        new AutoAdd(modID) //Loads files from this mod
+                .packageFilter(BaseCard.class) //In the same package as this class
+                .setDefaultSeen(true) //And marks them as seen in the compendium
+                .cards(); //Adds the cards
     }
 }
