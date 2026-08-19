@@ -11,19 +11,21 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Strike extends BaseCard {
     public static final String ID = makeID(Strike.class.getSimpleName());
-    private static final CardStats info = new CardStats(
-            MyCharacter.Meta.CARD_COLOR,
-            CardType.ATTACK,
-            CardRarity.BASIC,
-            CardTarget.ENEMY,
-            1
-    );
+    private static CardStats info() {
+        return new CardStats(
+                MyCharacter.Meta.CARD_COLOR,
+                CardType.ATTACK,
+                CardRarity.BASIC,
+                CardTarget.ENEMY,
+                1
+        );
+    }
 
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
 
     public Strike() {
-        super(ID, info);
+        super(ID, info());
 
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
 

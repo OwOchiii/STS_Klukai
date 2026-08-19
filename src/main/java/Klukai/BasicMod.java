@@ -59,6 +59,9 @@ public class BasicMod implements
     public BasicMod() {
         BaseMod.subscribe(this); //This will make BaseMod trigger all the subscribers at their appropriate times.
         logger.info(modID + " subscribed to BaseMod.");
+        logger.info("CARD_COLOR value: " + MyCharacter.Meta.CARD_COLOR);
+        MyCharacter.Meta.registerColor();
+        logger.info("getBgColor result: " + BaseMod.getBgColor(MyCharacter.Meta.CARD_COLOR));
     }
 
     @Override
