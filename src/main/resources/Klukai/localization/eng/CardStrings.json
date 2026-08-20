@@ -12,5 +12,9 @@
   "${modID}:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
+  },
+  "${modID}:Swift_Strike": {
+    "NAME": "Swift Strike",
+    "DESCRIPTION": "Deal !D! damage. Ignore Strength. Ignore Thorns."
   }
 }
