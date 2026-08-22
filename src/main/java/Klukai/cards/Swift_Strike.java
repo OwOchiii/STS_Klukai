@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+// Description: Swift Strike is a basic attack card that deals damage to an enemy. If the enemy is Vulnerable, it deals increased damage (1.5x or 1.75x if the player has the Paper Phrog relic). The card ignores Thorns when attacking. No scaling with Strength
 public class Swift_Strike extends BaseCard{
 
     public static final String ID = makeID("Swift_Strike");
